@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/produk', [ProdukController::class, 'tampilkan']);
+
+Route::get('/test', function () {
+    return "OK";
 });
